@@ -1,0 +1,18 @@
+{
+  "name": "dockerize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "backup": "docker exec -t dockerize_db_1 pg_dumpall -c -U postgres > pgdata/dump_`date +%d-%m-%Y'_'%H_%M_%S`.sql"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}

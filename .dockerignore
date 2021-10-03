@@ -1,0 +1,4 @@
+yarn.lock
+docker-compose.yaml
+api.rest
+node_modules
